@@ -1,8 +1,8 @@
 rm(list =ls());
 total <- read.table("Total Score and Time.txt", header = TRUE);
 attach(total);
-plot(Score, Time, main="Total Score vs Time", xlab="Score", ylab="Time");
-Fit<-lm(Time~Score);
+plot(Time, Score main="Total Time vs Score", xlab="Time", ylab="Score");
+Fit<-lm(Score ~ Time);
 summary(Fit);
 abline(Fit);
 Fit$residuals;
@@ -14,9 +14,9 @@ qqnorm(rstandard(Fit));
 qqline(rstandard(Fit));
 plot (rstandard(Fit)~Fit$fitted.values, main='Standarized Residuals vs Fitted Values');
 abline(0,0);
-plot (rstandard(Fit), main = 'standarized residuals vs observation number')
+plot (rstandard(Fit), main = 'Standarized residuals vs Observation number')
 abline(0,0);
-plot (rstandard(Fit)~Score, main = 'standarized residuals vs score');
+plot (rstandard(Fit)~Score, main = 'Standarized residuals vs Time');
 abline(0,0);
 
 
