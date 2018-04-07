@@ -1,7 +1,7 @@
 rm(list =ls());
 total <- read.table("Total Score and Time.txt", header = TRUE);
 attach(total);
-plot(Score, Time, main="Industrial and Mechanical Engineers: Score vs Time", xlab="Score", ylab="Time");
+plot(Score, Time, main="Total Score vs Time", xlab="Score", ylab="Time");
 Fit<-lm(Time~Score);
 summary(Fit);
 abline(Fit);
