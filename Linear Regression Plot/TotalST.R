@@ -17,7 +17,7 @@ plot (rstandard(Fit)~Fit$fitted.values, main='Standarized Residuals vs Fitted Va
 abline(0,0);
 plot (rstandard(Fit), main = 'Standarized residuals vs Observation number')
 abline(0,0);
-plot (rstandard(Fit)~Score, main = 'Standarized residuals vs Time');
+plot (rstandard(Fit)~Time, main = 'Standarized residuals vs Time');
 abline(0,0);
 
 
