@@ -1,8 +1,8 @@
 rm(list =ls());
-total <- read.table("Total Score and Time.txt", header = TRUE);
-attach(total);
-plot(Time, Score, main="Total Time vs Score", xlab="Time", ylab="Score");
-Fit<-lm(Score ~ Time);
+linalg <- read.table("LinAlgvScore.txt", header = TRUE);
+attach(linalg);
+plot(Mark, Score, main="Linear Algebra Mark vs Score", xlab="Linear Algebra Mark", ylab="Score");
+Fit<-lm(Score ~ Mark);
 summary(Fit);
 abline(Fit);
 cor.test(Score,Time);
